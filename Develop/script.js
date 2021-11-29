@@ -1,6 +1,16 @@
 // Assignment code here
 var generatePassword = function(){
   var pass = "test";
+
+  var passLength = window.prompt("Insert length of password.");
+
+  var isLower = window.confirm("Would you like your password to have Lower Case characters?");
+
+  var isUpper = window.confirm("Would you like your password to have Upper Case characters?");
+
+  var isNumeric = window.confirm("Would you like your password to have Numeric characters?");
+  
+  var isSpecial = window.confirm("Would you like your password to have Special characters?");
   
   return pass;
 }
