@@ -2,7 +2,7 @@
 var generatePassword = function(){
   
   var passLength = parseInt(window.prompt("Insert length of password."));
-  debugger;
+  
   //Checks if passLength is an Integer and is between 8-128
   while(Number.isNaN(passLength) || passLength >= 128 || passLength <= 8){
     passLength = parseInt(window.prompt("Please insert a number between 8-128 for your password length."));
