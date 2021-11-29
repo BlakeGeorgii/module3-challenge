@@ -27,13 +27,18 @@ var generatePassword = function(){
     availableChars += "\ \!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\]\^\_\`\{\|\}\~";
   }
 
-  var pass = "";
-  //Takes a random character from availableChars and adds it to pass for passLength
-  for(var i = 0; i < passLength; i++){
-    pass += availableChars.charAt(Math.random() * availableChars.length);
+  if(availableChars){
+    var pass = "";
+    //Takes a random character from availableChars and adds it to pass for passLength
+    for(var i = 0; i < passLength; i++){
+      pass += availableChars.charAt(Math.random() * availableChars.length);
+    }
+    return pass;
   }
-  
-  return pass;
+  else{
+    window.alert("Please select a type of character in order to generate a password.")
+    return "";
+  }
 }
 
 
