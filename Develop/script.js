@@ -1,13 +1,6 @@
 // Assignment code here
 var generatePassword = function(){
   
-  var passLength = parseInt(window.prompt("Insert length of password."));
-  
-  //Checks if passLength is an Integer and is between 8-128
-  while(Number.isNaN(passLength) || passLength >= 128 || passLength <= 8){
-    passLength = parseInt(window.prompt("Please insert a number between 8-128 for your password length."));
-  }
-
   var availableChars = "";
 
   //Adds lowercase characters to available characters if user agrees
@@ -26,8 +19,15 @@ var generatePassword = function(){
   if(window.confirm("Would you like your password to have Special characters?")){
     availableChars += "\ \!\"\#\$\%\&\'\(\)\*\+\,\-\.\/\:\;\<\=\>\?\@\[\]\^\_\`\{\|\}\~";
   }
-
+  //Checks if availableChars has any data
   if(availableChars){
+    var passLength = parseInt(window.prompt("Insert length of password."));
+    
+    //Checks if passLength is an Integer and is between 8-128
+    while(Number.isNaN(passLength) || passLength > 128 || passLength < 8){
+      passLength = parseInt(window.prompt("Please insert a number between 8-128 for your password length."));
+    }
+
     var pass = "";
     //Takes a random character from availableChars and adds it to pass for passLength
     for(var i = 0; i < passLength; i++){
@@ -36,8 +36,8 @@ var generatePassword = function(){
     return pass;
   }
   else{
-    window.alert("Please select a type of character in order to generate a password.")
-    return "";
+    window.alert("Please select at least one type of character in order to generate a password.")
+    return generatePassword();
   }
 }
 
