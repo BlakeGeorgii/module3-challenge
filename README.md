@@ -7,5 +7,5 @@ The challenge was to create a password generator. I did this by creating the "ge
 ##Links
 
     To Repository: https://github.com/BlakeGeorgii/module3-challenge
-    To GitHub Pages: https://blakegeorgii.github.io/module1-challenge/#search-engine-optimization
+    To GitHub Pages: https://blakegeorgii.github.io/module3-challenge/
 
